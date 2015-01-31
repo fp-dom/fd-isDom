@@ -12,6 +12,7 @@
 ```js
 var isDom = require('fd-isdom');
 var ifElse = require('fd-ifelse');
+var div = document.createElement('div');
 
 ifElse(
   isDom(div),

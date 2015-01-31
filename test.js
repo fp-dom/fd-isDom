@@ -1,0 +1,23 @@
+"use strict";
+
+var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["default"] : obj; };
+
+var test = _interopRequire(require("prova"));
+
+var isDom = _interopRequire(require("./"));
+
+
+
+
+test("fd-isDom", function (t) {
+  t.plan(6);
+
+  var div = document.createElement("div");
+
+  t.notOk(isDom()());
+  t.notOk(isDom(null)());
+  t.notOk(isDom({})());
+  t.notOk(isDom("")());
+  t.ok(isDom(div)());
+  t.ok(isDom(document)());
+});

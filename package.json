@@ -1,7 +1,7 @@
 {
   "name": "fd-isdom",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "Check if an object is a dom object",
   "main": "index.js",
   "scripts": {
     "test": "gulp test"

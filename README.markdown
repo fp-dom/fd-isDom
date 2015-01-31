@@ -1,7 +1,7 @@
 # fd-isDom
 
 [![Build Status](https://travis-ci.org/fp-dom/fd-isDom.svg)](https://travis-ci.org/fp-dom/fd-isDom) [![npm version](https://badge.fury.io/js/fd-isdom.svg)](http://badge.fury.io/js/fd-isdom)
-> This is a template repo for fp-dom.
+> Check if an object is a dom object
 
 ## Installation
 

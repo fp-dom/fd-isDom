@@ -10,10 +10,11 @@ var isDom = _interopRequire(require("./"));
 
 
 test("fd-isDom", function (t) {
-  t.plan(6);
+  t.plan(7);
 
   var div = document.createElement("div");
 
+  t.equals(typeof isDom(), "function");
   t.notOk(isDom()());
   t.notOk(isDom(null)());
   t.notOk(isDom({})());

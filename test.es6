@@ -3,10 +3,11 @@ import isDom from './';
 
 
 test('fd-isDom', (t) => {
-  t.plan(6);
+  t.plan(7);
  
   let div = document.createElement('div');
 
+  t.equals(typeof isDom(), 'function');
   t.notOk(isDom()());
   t.notOk(isDom(null)());
   t.notOk(isDom({})());

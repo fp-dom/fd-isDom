@@ -19,3 +19,24 @@ ifElse(
   () => console.log('no')
 );
 ```
+
+
+## API
+
+### isDom
+
+Checks if a object is a dom object
+
+`isDom(obj)`
+
+***Parameters***
+
+| Name          | Type        | Description                |
+| ------------- | ----------- | -------------------------- |
+| obj           | *           | Object to be checked       |
+
+***Returns***
+
+| Type        | Description                                         |
+| ----------- | --------------------------                          |
+| function    | A function that checks if the value is a dom object |

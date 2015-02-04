@@ -1,5 +1,7 @@
-export default function isDom(dom) {
-  return () => {
+import { curry1 } from 'fj-curry';
+
+
+let isDom = curry1(function(dom) {
     if (!dom || typeof dom !== 'object') {
       return false;
     }
@@ -9,5 +11,6 @@ export default function isDom(dom) {
     }
 
     return 'number' === typeof dom.nodeType && 'string' === typeof dom.nodeName;
-  };
-}
+});
+
+export default isDom;

@@ -15,10 +15,10 @@ var ifElse = require('fj-ifelse');
 var div = document.createElement('div');
 
 ifElse(
-  isDom(div),
+  isDom(),
   () => console.log('yes'),
   () => console.log('no')
-);
+)(div);
 ```
 
 
@@ -28,7 +28,7 @@ ifElse(
 
 Checks if a object is a dom object
 
-`isDom(obj)`
+`isDom()`
 
 ***Parameters***
 
@@ -40,4 +40,4 @@ Checks if a object is a dom object
 
 | Type        | Description                                         |
 | ----------- | --------------------------                          |
-| function    | A function that checks if the value is a dom object |
+| function    | A function that checks if the passed value is a dom object |

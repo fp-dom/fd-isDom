@@ -1,19 +1,28 @@
 "use strict";
 
-var curry1 = require("fj-curry").curry1;
+var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["default"] : obj; };
 
+var curry1 = require("fj-curry").curry1;
+var typeOf = _interopRequire(require("fj-typeof"));
+
+
+
+
+var isNumber = typeOf("number");
+var isString = typeOf("string");
+var isObject = typeOf("object");
 
 
 var isDom = curry1(function (dom) {
-  if (!dom || typeof dom !== "object") {
+  if (!dom || !isObject(dom)) {
     return false;
   }
 
-  if ("object" === typeof window.Node) {
+  if (isObject(window.Node)) {
     return dom instanceof window.Node;
   }
 
-  return "number" === typeof dom.nodeType && "string" === typeof dom.nodeName;
+  return isNumber(dom.nodeType) && isString(dom.nodeName);
 });
 
 module.exports = isDom;

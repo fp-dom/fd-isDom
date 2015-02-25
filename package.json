@@ -34,6 +34,7 @@
     "prova": "^2.1.1"
   },
   "dependencies": {
-    "fj-curry": "^1.0.0"
+    "fj-curry": "^1.0.0",
+    "fj-typeof": "^1.0.0"
   }
 }
